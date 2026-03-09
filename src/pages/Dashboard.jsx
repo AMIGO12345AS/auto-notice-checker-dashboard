@@ -228,7 +228,7 @@ export default function Dashboard() {
                 // COMPACT VIEW
                 if (viewMode === 'compact') {
                   return (
-                    <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={client.id}>
+                    <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} key={client.id}>
                       <Link to={`/client/${client.id}`} className="group flex items-center justify-between p-3 bg-white hover:bg-gray-50 border border-gray-100 rounded-lg transition-colors">
                         <div className="flex items-center gap-4 overflow-hidden">
                           {client.unreadCount > 0 ? (
@@ -255,7 +255,7 @@ export default function Dashboard() {
                 // LIST VIEW
                 if (viewMode === 'list') {
                   return (
-                    <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={client.id}>
+                    <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} key={client.id}>
                       <Link to={`/client/${client.id}`} className="group flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white hover:border-gray-300 border border-gray-100 rounded-xl transition-all shadow-sm">
                         <div className="flex items-start sm:items-center gap-4 min-w-0 mb-3 sm:mb-0">
                           <div className="h-10 w-10 shrink-0 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center text-sm font-medium text-gray-600">
@@ -292,7 +292,7 @@ export default function Dashboard() {
 
                 // GRID VIEW (Default)
                 return (
-                  <motion.div layout initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} key={client.id}>
+                  <motion.div layout initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} key={client.id}>
                     <Link to={`/client/${client.id}`} className="group flex flex-col h-full bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all">
                       <div className="flex justify-between items-start mb-4">
                         <div className="h-9 w-9 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center text-sm font-medium text-gray-600">
